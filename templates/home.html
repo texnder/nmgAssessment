@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Basic Video Sharing Service</h1>
+    <h2>Available Videos:</h2>
+    <ul>
+        {% for video in videos %}
+        <li><a href="{{ url_for('core.watch', video_name=video) }}">{{ video }}</a></li>
+        {% endfor %}
+    </ul>
+    <h2>Upload Video:</h2>
+    <form method="POST" action="/upload" enctype="multipart/form-data">
+        <input type="file" name="video" accept=".mp4">
+        <input type="submit" value="Upload">
+    </form>
+</body>
+</html>

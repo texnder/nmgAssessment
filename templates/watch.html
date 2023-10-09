@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Watch Video</h1>
+    <video width="640" height="360" controls>
+        <source src="{{ url_for('core.video', video_name=video_name) }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <br/>
+    <a href="/">back</a>
+</body>
+</html>
